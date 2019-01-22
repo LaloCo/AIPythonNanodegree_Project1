@@ -1,0 +1,77 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                        mop.jpg  label:                           
+ 2 key:                     dog_02.jpg  label:                        dog
+ 3 key:                     dog_01.jpg  label:                        dog
+ 4 key:                    giraffe.jpg  label:                           
+
+     MATCH:
+
+                       mop.jpg: 
+Real:                              Classifier:                swab, swob, mop
+
+                    dog_01.jpg: 
+Real:                        dog   Classifier:              Eskimo dog, husky
+
+                   giraffe.jpg: 
+Real:                              Classifier: horned viper, cerastes, sand viper, horned asp, Cerastes cornutus
+
+ NOT A MATCH:
+
+                    dog_02.jpg: 
+Real:                        dog   Classifier: Madagascar cat, ring-tailed lemur, Lemur catta
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+     MATCH:
+
+                       mop.jpg: 
+Real:                              Classifier:                swab, swob, mop  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    dog_01.jpg: 
+Real:                        dog   Classifier:              Eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                   giraffe.jpg: 
+Real:                              Classifier: horned viper, cerastes, sand viper, horned asp, Cerastes cornutus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    dog_02.jpg: 
+Real:                        dog   Classifier: Madagascar cat, ring-tailed lemur, Lemur catta  
+PetLabelDog: 1  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+
+RESULTS FOR THE RESNET MODEL
+
+Number of images: 4
+Number of dog images: 2
+Number of "not a" dog images: 2
+
+Percentage Calculations:
+% correct dogs: 50.0
+% correct notdogs: 100.0
+% correct breed: 50.0
+
+
+Incorrectly classified as dogs:
+dog (classified as Madagascar cat, ring-tailed lemur, Lemur catta)
+
+** Total Elapsed Runtime: 0:0:1
